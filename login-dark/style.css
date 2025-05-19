@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@400;800 & family= Roboto & display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+body * {
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+
+}
+/*
+    VW-Porcentagem da largura da sua viewport-Tela
+    VH-Escolhe a porcentagem da tela que vc quer ocupar de altura
+
+    width-largura
+
+    height-Altura
+
+    display-flex, faz com que o conteudo fique lado a lado.
+
+    justify-content, centraliza os conteudos no eixo X->.
+    (com flex direction alteramos esse padrão)
+    align-itens, centraliza no eixo Y-^.
+
+    flex-end, justifica a direita
+
+    flex-start, justifica a esqueda
+
+    center, justifica no centro
+
+    space-between, espaço igual para todos os elementos
+
+    space-around, espaço igual para todos " porem menor
+*/
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+/*
+flex-direction, esta sendo ultilizado para mudar a direção dos itens, mesmo que o display flex esteja alinhando os itens
+
+*/
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: #77ffc0;
+
+}
+/*utilizando o ">" para chamar a tag h1 da class respectiva
+
+*/
+
+.img-animated {
+    width:35vw;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    background: #201b2c;
+    font-size: 16px;
+    justify-content: start;
+    padding: 0px 22px;
+}
+
+.footer > a {
+    text-decoration: none;
+    outline: none;
+    color: #77ffc0;
+    cursor: pointer;
+}
+
+
+
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+/*  
+    utilizando a "%" porque assim utilizo a porcentagem da tela da div em que esta a class respectiva, diferente do vh vw que utiliza toda a tela
+    padding-margem, Primeiro valor tem referencia ao eixo Y " ^ ", segundo valor tem referecia ao eixo X "<>"
+
+    Border-radius,Bordas arredondadas
+
+    box-shadow-sombra, primeiro valor eixo X sobra para esquerda ou direita, Y Sobra para cima ou baixo
+
+    terceiro valor blur-borrão
+*/
+
+.card-login > h1 {
+
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+/*Font-weight, grossura da fonte, sendo o maximo 800 */
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 16px;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box; 
+}
+
+/*  
+    box-sizing:border-box, deixa divs com o mesmo tamanho em altura e largura 
+    Outline-none, remove as marcaçõe em volta das caixas
+*/
+
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+/*Margin-botton, margem para baixo*/
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+/*'::'-usado no caso para chamar o placeholder*/
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+/*
+    text-transform : upercase, deixa todas as letras em maiusculo
+    letter-spacing : usado para o espaçamento entre letras
+    4 valor do box shadow ?????
+*/
+
+
+@media only screen and (max-width:950px){
+    .card-login{
+        width: 85%;
+    }
+}
+@media only screen and (max-width:600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1 {
+        display: none;
+    }
+    
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 50vh;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
